@@ -1,53 +1,64 @@
 const getNthElement = (index, array) => {
-  // your code here
+  return array[index % array.length];
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.join(',');
 };
 
 const csvStringToArray = string => {
-  // your code here
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  return array.concat(element);
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  return array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  return numbers.join().split(',');
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  const upper = strings.map(item => {
+    return item.toUpperCase();
+  });
+  return upper;
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  const reverse = strings.map(item =>
+    item
+      .split('')
+      .reverse()
+      .join('')
+  );
+  return reverse;
 };
 
 const onlyEven = numbers => {
-  // your code here
+  return numbers.filter(even => even % 2 === 0);
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  return array.filter((remove, i) => i !== index);
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  return strings.filter(vowel => /^[aeiou]/i.test(vowel));
+  // ^ refers to start of string & i refers to a case-insensitive modifier
 };
 
 const removeSpaces = string => {
-  // your code here
+  return string.replace(/\s+/g, '');
+  // \s is regex for whitespace and g is a global flag (so match all whitespace and remove it)
 };
 
 const sumNumbers = numbers => {
