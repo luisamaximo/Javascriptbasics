@@ -62,12 +62,13 @@ const removeSpaces = string => {
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  return numbers.reduce((sum, a) => sum + a, 0);
 };
 
 const sortByLastLetter = strings => {
-  // your code here
-};
+  return strings.sort(
+    (a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1)
+  );
 
 module.exports = {
   getNthElement,
